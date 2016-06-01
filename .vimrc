@@ -72,8 +72,8 @@ set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'powerline/powerline'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
 Plugin 'klen/python-mode'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
@@ -86,7 +86,6 @@ let g:ctrlp_max_height=30
 
 " settings for NERDTree
 noremap <leader>nt :NERDTreeToggle<CR>
-
 
 
 
