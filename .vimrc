@@ -75,13 +75,19 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'klen/python-mode'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
 call vundle#end()
 
 
 "" settings for ctrlp
 let g:ctrlp_max_height=30
+
+
+" for airline to display status line
+set laststatus=2
 
 
 " settings for NERDTree
@@ -90,18 +96,11 @@ noremap <leader>nt :NERDTreeToggle<CR>
 
 
 " Settings for python-mode
-map <Leader>g :call RopeGotoDefinition()<CR>
-let ropevim_enable_shortcuts = 1
-let g:pymode_rope_goto_def_newwin = "vnew"
-let g:pymode_rope_extended_complete = 1
 let g:pymode_breakpoint = 0
 let g:pymode_syntax = 1
 let g:pymode_syntax_builtin_objs = 0
-let g:pymode_rope_completion = 1  "turn on code completion in the plugin
 let g:pymode_syntax_builtin_funcs = 0
-map <Leader>b Oimport ipdb; ipdb.set_trace()
-
-
-
-" Code Folding
-set nofoldenable
+let g:pymode_folding=1
+let g:pymode_python='python3'
+" disable rope of python-mode
+let g:pymode_rope=0  
